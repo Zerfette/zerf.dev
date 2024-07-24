@@ -7,7 +7,7 @@ import { Article } from './types'
 
 const toArticle = ({ title, link, imgSrc }: Article) => (
   <li key={title} className="m-6">
-    <a href={link}>
+    <a target="_blank" href={link}>
       <Card variant="withDivider">
         <img src={imgSrc} className="w-full" />
         <Heading level="h3" className="text-center p-4">

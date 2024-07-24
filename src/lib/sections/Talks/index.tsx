@@ -11,7 +11,7 @@ const toTalk = ({ title, description, video }: Talk) => (
   <li key={title}>
     <Card variant="withDivider" className="m-6">
       {video ? (
-        <a href={video} className={classes.header}>
+        <a target="_blank" href={video} className={classes.header}>
           <Heading level="h3" className="m-4">
             {title}
           </Heading>
