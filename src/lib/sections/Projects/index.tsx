@@ -4,6 +4,7 @@ import { map } from 'fp-ts/lib/Array'
 import { Card, SectionHeading } from '~/lib/components'
 import { Heading } from '~/lib/typography'
 import { projects } from './model'
+import classes from './style.module.css'
 import { Project } from './types'
 
 const toProject = ({
@@ -18,19 +19,20 @@ const toProject = ({
         <img
           alt={title}
           src={imgSrc}
-          className="mx-auto h-24 "
+          className={classes.img}
         />
         <Heading level="h3" className="text-center m-4">
           {title}
         </Heading>
       </div>
-      <div className="-mt-px flex divide-x divide-gray-200">
+      <div className={classes.footer}>
         <a
           href={github}
-          className="flex items-center justify-center w-0 flex-1 p-2"
+          className={classes.link}
+          target="_blank"
         >
           <Heading level="h4" className="mr-2">
-            Github
+            GitHub
           </Heading>
           <FontAwesomeIcon
             icon={faArrowUpRightFromSquare}
@@ -38,7 +40,8 @@ const toProject = ({
         </a>
         <a
           href={website}
-          className="-ml-px flex items-center justify-center w-0 flex-1 p-2"
+          className={classes.link}
+          target="_blank"
         >
           <Heading level="h4" className="mr-2">
             Website
@@ -54,13 +57,14 @@ const toProject = ({
 
 export const Projects = () => (
   <>
-    <SectionHeading variant="simple" className="mt-12" id="projects">
+    <SectionHeading
+      variant="simple"
+      className="mt-12"
+      id="projects"
+    >
       <Heading level="h3">Projects</Heading>
     </SectionHeading>
-    <ul
-      role="list"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4"
-    >
+    <ul role="list" className={classes.list}>
       {map(toProject)(projects)}
     </ul>
   </>

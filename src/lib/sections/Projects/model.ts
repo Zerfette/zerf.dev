@@ -2,28 +2,28 @@ import { Project } from "./types"
 
 export const projects: Project[] = [
     {
-        title: 'react sudoku application',
+        title: 'React Sudoku Application',
         imgSrc: 'react.svg',
         github: 'https://github.com/Zerfette/nx-sudoku-multiframework',
         website: 'https://react.zerf.dev',
         
     },
     {
-        title: 'solid sudoku application',
+        title: 'Solid Sudoku Application',
         imgSrc: 'solid.svg',
         github: 'https://github.com/Zerfette/nx-sudoku-multiframework',
         website: 'https://solid.zerf.dev',
         
     },
     {
-        title: 'svelte sudoku application',
+        title: 'Svelte Sudoku Application',
         imgSrc: 'svelte.svg',
         github: 'https://github.com/Zerfette/nx-sudoku-multiframework',
         website: 'https://svelte.zerf.dev',
         
     },
     {
-        title: 'vue sudoku application',
+        title: 'Vue Sudoku Application',
         imgSrc: 'vue.svg',
         github: 'https://github.com/Zerfette/nx-sudoku-multiframework',
         website: 'https://vue.zerf.dev',

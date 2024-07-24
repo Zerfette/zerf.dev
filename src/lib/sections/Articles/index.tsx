@@ -2,10 +2,11 @@ import { map } from 'fp-ts/lib/Array'
 import { Card, SectionHeading } from '~/lib/components'
 import { Heading } from '~/lib/typography'
 import { articles } from './model'
+import classes from './style.module.css'
 import { Article } from './types'
 
 const toArticle = ({ title, link, imgSrc }: Article) => (
-  <li key={title}  className="m-6">
+  <li key={title} className="m-6">
     <a href={link}>
       <Card variant="withDivider">
         <img src={imgSrc} className="w-full" />
@@ -26,10 +27,7 @@ export const Articles = () => (
     >
       <Heading level="h3">Articles</Heading>
     </SectionHeading>
-    <ul
-      role="list"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4"
-    >
+    <ul role="list" className={classes.list}>
       {map(toArticle)(articles)}
     </ul>
   </>

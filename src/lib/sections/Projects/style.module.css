@@ -1,0 +1,15 @@
+.list {
+    @apply grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4
+}
+
+.link {
+    @apply flex items-center justify-center w-0 flex-1 p-2
+}
+
+.footer {
+    @apply flex divide-x divide-gray-200
+}
+
+.img {
+    @apply mx-auto h-24
+}
